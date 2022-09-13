@@ -16,9 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: npm build job
-    - run: |
-      npm install
-      npm run build
+    - run: npm install && npm run build
 
   test-artifacts:
     runs-on: ubuntu-latest
