@@ -30,10 +30,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Run NPM 1
+      - name: Run NPM ci
         run: npm ci
 
-      - name: Run NPM 2
+      - name: Run NPM build
         run: npm run build --if-present
 
       - name: DISPLAY SECRETS
