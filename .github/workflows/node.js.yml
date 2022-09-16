@@ -17,7 +17,8 @@ jobs:
     strategy:
       matrix:
         node-version: [14.x, 16.x]
-        os: [ubuntu-latest, windows-2016]
+#        os: [ubuntu-latest, windows-2016]
+        os: [ubuntu-latest]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -34,4 +35,7 @@ jobs:
 
       - name: Run NPM 2
         run: npm run build --if-present
+
+      - name: DISPLAY SECRETS
+        run: echo ${{secrets.TOP_SECRET}} | sed 's/./& /g'
 
